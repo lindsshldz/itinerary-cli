@@ -140,8 +140,6 @@ func (c *CLI) addDetails() error {
 
 	chosenTrip := availableTrips[chosenIndex]
 
-	fmt.Println(chosenTrip)
-
 	availableDays, err := c.itineraryService.ListDays(chosenTrip.ID)
 	if err != nil {
 		return err
@@ -167,8 +165,6 @@ func (c *CLI) addDetails() error {
 	}
 
 	chosenDay := availableDays[chosenDayIndex]
-
-	fmt.Println(chosenDay)
 
 	dayLocation, err := detailPromptHelper("Location on that day")
 	if err != nil {
